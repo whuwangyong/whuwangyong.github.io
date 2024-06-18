@@ -88,7 +88,7 @@ def main():
     print("++ current dir is:", os.getcwd())
 
     commit_urls()
-    upload_index_2_algolia()
+    # upload_index_2_algolia()
 
     print("+++++++++++++++++++")
     print("done!")
