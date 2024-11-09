@@ -11,7 +11,7 @@ import subprocess
 import time
 
 import requests
-from algoliasearch.search_client import SearchClient
+# from algoliasearch.search_client import SearchClient
 
 
 # 将最新的url提交到bing
@@ -68,18 +68,18 @@ def commit_urls():
 
 
 # 需要在gh-pages分支操作，因为要读index.json文件
-def upload_index_2_algolia():
-    print("上传索引文件到algolia...")
-    # Connect and authenticate with your Algolia app
-    client = SearchClient.create("YMLBEBNFHL", "4962bf8c8b0c034ee6ef247a9c162304")
+# def upload_index_2_algolia():
+#     print("上传索引文件到algolia...")
+#     # Connect and authenticate with your Algolia app
+#     client = SearchClient.create("YMLBEBNFHL", "4962bf8c8b0c034ee6ef247a9c162304")
 
-    # Create a new index and add a record
-    index = client.init_index("new-index-1649076215")
-    with open('./public/index.json', 'r', encoding='utf8') as fp:
-        json_data = json.load(fp)
-    index.save_objects(json_data).wait()
+#     # Create a new index and add a record
+#     index = client.init_index("new-index-1649076215")
+#     with open('./public/index.json', 'r', encoding='utf8') as fp:
+#         json_data = json.load(fp)
+#     index.save_objects(json_data).wait()
 
-    print("上传索引文件到algolia完成")
+#     print("上传索引文件到algolia完成")
 
 
 def main():

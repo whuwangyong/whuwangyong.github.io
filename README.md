@@ -13,8 +13,12 @@ GitHub Action会调用publish.py脚本，该脚本实现了以下功能：
 
 主题更新：
 ```bash
-git submodule update --remote --merge
+git submodule update --remote [--merge]
 git add .
 git commit -m "upgrade theme"
 git push
+```
+第一次克隆带有子模块的项目，首先需要初始化子模块：
+```bash
+git submodule update --init [--recursive]
 ```
